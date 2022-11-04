@@ -32,9 +32,14 @@ if __name__=='__main__':
     data_ingetion_config=DataIngestionConfig(training_pipeline_config=training_pipeline_config)
     print(data_ingetion_config.__dict__)'''
 
-if __name__=='__main__':
-    training_pipeline=TrainPipeline()
-    training_pipeline.run_pipeline()
+if __name__ == '__main__':
+    try:
+    
+        training_pipeline = TrainPipeline()
+        training_pipeline.run_pipeline()
+    except Exception as e:
+        print(e)
+        logging.exception(e)
 
 
 
