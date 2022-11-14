@@ -11,7 +11,7 @@ class MongoDBClient:
         try:
 
             if MongoDBClient.client is None:
-                mongo_db_url = 'mongodb+srv://imanuragshuk@cluster0.wfk1jkp.mongodb.net/test'
+                mongo_db_url = 'mongodb+srv://imanuragshuk:@cluster0.wfk1jkp.mongodb.net/test'
               
                 MongoDBClient.client = pymongo.MongoClient(mongo_db_url,tlsCAFile=ca)
             self.client = MongoDBClient.client
