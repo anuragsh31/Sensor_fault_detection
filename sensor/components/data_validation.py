@@ -15,7 +15,7 @@ class DataValidation:
         try:
             self.data_ingestion_artifact=data_ingestion_artifact
             self.data_validation_config=data_validation_config
-            self._schema_config = read_yaml_file(SCHEMA_FILE_PATH)
+            self._schema_config = read_yaml_file(SCHEMA_FILE_PATH)  #for getting the number of column.
         except Exception as e:
             raise  SensorException(e,sys)
     
@@ -80,7 +80,7 @@ class DataValidation:
             
             drift_report_file_path = self.data_validation_config.drift_report_file_path
             
-            #Create directory
+            #Create directory for repoty.yaml where we store all drift data report
             dir_path = os.path.dirname(drift_report_file_path)
             os.makedirs(dir_path,exist_ok=True)
             write_yaml_file(file_path=drift_report_file_path,content=report,)

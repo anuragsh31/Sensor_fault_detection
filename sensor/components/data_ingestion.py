@@ -8,7 +8,7 @@ from pandas import DataFrame
 from sensor.data_access.sensor_data import SensorData
 from sensor.utils.main_utils import read_yaml_file
 from sensor.constant.training_pipeline import SCHEMA_FILE_PATH
-class DataIngestion:
+class DataIngestion: 
 
     def __init__(self,data_ingestion_config:DataIngestionConfig):
         try:
@@ -17,7 +17,7 @@ class DataIngestion:
         except Exception as e:
             raise SensorException(e,sys)
 
-    def export_data_into_feature_store(self) -> DataFrame:
+    def export_data_into_feature_store(self) -> DataFrame: #from sensor_data.py
         """
         Export mongo db collection record as data frame into feature
         """

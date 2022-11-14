@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 from typing import List
 
 def get_requirement()->List[str]:
-    requirement_list:list[str]=[]
+    requirement_list:list[str]=[]  # add all the requirements in this list which we need
     return requirement_list
 
 setup(
