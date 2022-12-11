@@ -9,3 +9,18 @@ In this project, the system in focus is the Air Pressure system (APS) which gene
 
 The problem is to reduce the cost due to unnecessary repairs. So it is required to minimize the false predictions. 
  
+## Tech Stack Used
+
+1. Python
+2. Machine learning algorithms
+3. Docker
+4. MongoDB
+
+## Infrastructure Required
+1. AWS S3
+2. AWS EC2
+3. AWS ECR
+4. Git Actions
+## High Level Design
+
+![0_Sensor Training Pipeline](https://user-images.githubusercontent.com/106172048/206924846-22a23076-ae73-4f80-b9d2-8e21c326785a.png)
